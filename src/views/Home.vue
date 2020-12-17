@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="header">
-      <h1>aiDogGo 后台大数据可视化</h1>
+      <h1>管理系统的用户行为数据可视化</h1>
       <div class="showtime">当前时间为：{{ timedata }}</div>
     </div>
     <div class="main">
