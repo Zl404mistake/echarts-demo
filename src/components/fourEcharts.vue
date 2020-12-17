@@ -1,56 +1,55 @@
 <template>
-     <div>
-      <h2>柱形图</h2>
-      <div ref="main" class="chart"></div>
-    </div>
+  <div>
+    <h2>用户环境</h2>
+    <div ref="main" class="chart"></div>
+  </div>
 </template>
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      color: ['#1089E7', '#f57474', '#56D0E3', '#f8B448', '#8B78F6'],
       option: {
         grid: {
           top: '10%',
           left: '22%',
-          bottom: '10%'
+          bottom: '10%',
           // containLabel: true
         },
         xAxis: {
-          show: false
+          show: false,
         },
         yAxis: [
           {
             nameTextStyle: {
               borderWidth: 15,
-              barBorderRadius: 50
+              barBorderRadius: 50,
             },
             inverse: true,
             type: 'category',
-            data: ['巴西', '印尼', '美国', '印度', '中国'],
+            data: ['APP', '小程序', 'H5'],
             axisLine: {
-              show: false
+              show: false,
             },
             axisTick: {
-              show: false
+              show: false,
             },
             axisLabel: {
-              color: '#fff'
-            }
+              color: '#fff',
+            },
           },
           {
-            data: ['100', '200', '300', '400', '500'],
+            data: ['1000', '500', '500'],
             axisLine: {
-              show: false
+              show: false,
             },
             axisTick: {
-              show: false
+              show: false,
             },
             axisLabel: {
-              color: '#fff'
-            }
-          }
+              color: '#fff',
+            },
+          },
         ],
         series: [
           {
@@ -62,41 +61,40 @@ export default {
               // 修改柱子圆角
               barBorderRadius: 20,
               color: (params) => {
-                // const num = this.color.length
-                return this.color[params.dataIndex]
-              }
+                return ['#1089E7', '#f57474', '#56D0E3'][params.dataIndex]
+              },
             },
             yAxisIndex: 0,
             label: {
               show: true,
               position: 'inside',
-              formatter: '{c}%'
+              formatter: '{c}%',
             },
-            data: [70, 34, 60, 78, 69]
+            data: [70, 34, 60],
           },
           {
             yAxisIndex: 1,
             barWidth: 15,
             barCategoryGap: 50,
-            name: '2012年',
+            name: '外壳',
             type: 'bar',
-            data: [100, 100, 100, 100, 100],
+            data: [100, 100, 100],
             itemStyle: {
               color: 'none',
               borderColor: '#fff',
               borderWidth: 4,
-              barBorderRadius: 10
-            }
-          }
-        ]
-      }
+              barBorderRadius: 10,
+            },
+          },
+        ],
+      },
     }
   },
-  created () {
+  created() {
     this.show()
   },
   methods: {
-    show () {
+    show() {
       this.$nextTick(() => {
         const myChart = this.$echarts.init(this.$refs.main)
         myChart.setOption(this.option)
@@ -104,11 +102,9 @@ export default {
           myChart.resize()
         })
       })
-    }
-  }
+    },
+  },
 }
 </script>
 
-<style lang="less" scoped>
-
-</style>
+<style lang="less" scoped></style>

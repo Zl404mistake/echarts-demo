@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>柱形图</h2>
+    <h2>新增用户</h2>
     <div ref="main" class="chart"></div>
   </div>
 </template>
@@ -88,7 +88,7 @@ export default {
         },
         series: [
           {
-            name: '新增粉丝',
+            name: '新增用户',
             type: 'line',
             stack: '总量',
             // 是否让线条圆滑显示

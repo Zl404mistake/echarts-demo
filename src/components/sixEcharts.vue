@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>柱形图</h2>
+    <h2>用户来源</h2>
     <div ref="main" class="chart"></div>
   </div>
 </template>

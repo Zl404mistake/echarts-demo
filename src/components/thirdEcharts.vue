@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>柱形图</h2>
+    <h2>推广数据</h2>
     <div ref="main" class="chart"></div>
   </div>
 </template>
@@ -25,23 +25,23 @@ export default {
             data: [
               {
                 value: 335,
-                name: 'A',
+                name: '抖音',
               },
               {
                 value: 310,
-                name: 'B',
+                name: '快手',
               },
               {
                 value: 234,
-                name: 'C',
+                name: 'B站',
               },
               {
                 value: 135,
-                name: 'D',
+                name: '微信',
               },
               {
                 value: 148,
-                name: 'E',
+                name: '百度',
               },
             ],
             itemStyle: {

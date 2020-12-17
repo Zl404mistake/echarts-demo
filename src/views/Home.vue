@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <div class="header">
-      <h1>数据可视化</h1>
-      <div class="showtime">当前时间为：{{timedata}}</div>
+      <h1>aiDogGo 后台大数据可视化</h1>
+      <div class="showtime">当前时间为：{{ timedata }}</div>
     </div>
     <div class="main">
       <div>
@@ -65,18 +65,18 @@ export default {
     fiveEcharts,
     sixEcharts,
     left,
-    right
+    right,
   },
-  data () {
+  data() {
     return {
-      timedata: ''
+      timedata: '',
     }
   },
-  created () {
+  created() {
     setInterval(this.time, 1000)
   },
   methods: {
-    time () {
+    time() {
       clearInterval()
       const dt = new Date()
       const y = dt.getFullYear()
@@ -87,56 +87,55 @@ export default {
       const s = dt.getSeconds()
       this.timedata = `${y}年${mt}月${day}日-${h}时${m}分${s}秒`
       // console.log(this.timedata)
-    }
-  }
+    },
+  },
 }
 </script>
 <style lang="less" scoped>
-h1{
+h1 {
   // line-height: 5.7143rem;
   text-align: center;
   color: #e1e3e6;
   font-size: 2.7143rem;
 }
-.showtime{
+.showtime {
   top: 0;
   line-height: 5.7143rem;
   position: absolute;
   right: 2.1429rem;
-  font-size: 1.1429rem  ;
-  color:#79d2d2;
+  font-size: 1.1429rem;
+  color: #79d2d2;
 }
-.header{
+.header {
   height: 7.1429rem;
   background: url(../assets/logo.png) no-repeat;
   background-size: 100% 100%;
   position: relative;
-
 }
-.home{
+.home {
   display: flex;
   flex-direction: column;
 }
-.main{
+.main {
   padding: 0.7143rem 0.7143rem 0;
   display: flex;
   color: #fff;
-  div{
+  div {
     flex: 3;
   }
-   div:nth-child(2){
-      flex:5;
-      .left{
-        display: flex;
-        padding: 0 1.0714rem;
-        justify-content: space-between;
-        div{
-          flex:2.5;
-        }
+  div:nth-child(2) {
+    flex: 5;
+    .left {
+      display: flex;
+      padding: 0 1.0714rem;
+      justify-content: space-between;
+      div {
+        flex: 2.5;
       }
     }
+  }
 }
-.map{
+.map {
   margin-top: 0.5714rem;
   height: 58.8571rem;
   // background: #79d2d2;
